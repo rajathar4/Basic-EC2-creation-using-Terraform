@@ -1,0 +1,45 @@
+terraform apply
+
+
+git add .
+git commit -m "Added variables, outputs and README"
+git push -u origin main /
+git push
+
+
+
+Summary: Basic EC2 Provisioning using Terraform on Amazon Web Services
+
+This project demonstrates how to provision cloud infrastructure using Terraform (Infrastructure as Code) and manage the source code using Git.
+The main objective was to automate the deployment of an EC2 instance in AWS instead of creating resources manually through the AWS Console.
+
+What Was Implemented
+
+> Configured AWS provider in Terraform
+> Created a Security Group allowing:
+
+    > SSH (Port 22)
+    > HTTP (Port 80)
+
+> Provisioned an EC2 instance (t3.micro)
+> Used Terraform variables to make the configuration reusable
+
+> Created output values to display:
+    > Instance ID
+    > Public IP Address
+
+> Managed project using Git and pushed to GitHub
+> Resolved real-time Git merge conflicts
+
+Key Concepts Demonstrated
+> Infrastructure as Code (IaC)
+> Terraform lifecycle: init, plan, apply, destroy
+> State management basics
+> Reusable configuration using variables
+> Git version control workflow
+> Merge conflict resolution
+> Basic AWS networking and security concepts
+
+Project Outcome
+
+Successfully automated EC2 provisioning in AWS using Terraform with reusable and version-controlled configuration, following DevOps best practices.
