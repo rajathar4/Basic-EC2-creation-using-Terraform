@@ -29,11 +29,11 @@ resource "aws_security_group" "web_sg" {
 # Create EC2 Instance
 resource "aws_instance" "web" {
   ami           = "ami-0f58b397bc5c1f2e8"  # Amazon Linux (ap-south-1)
-  instance_type = "t3.micro"
+  instance_type = var.instance_type
 
   vpc_security_group_ids = [aws_security_group.web_sg.id]
 
   tags = {
-    Name = "Terraform-EC2"
+    Name = var.instance_name
   }
 }
